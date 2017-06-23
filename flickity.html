@@ -1,0 +1,1433 @@
+<!doctype html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alternative carousel to Foundation&#x27;s Orbit">
+  <link rel="icon" href="assets/img/icons/foundation-favicon.ico" type="image/x-icon">
+  <title>Flickity | Foundation for Sites 6 Docs</title>
+  <link href="assets/css/docs.css?t=1?hash=7af22fabeb48689af9a4fa01c97e0bec" rel="stylesheet" />
+  <link href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css?hash=d67a4829844e6c261b489aef2d2436a6" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="./node_modules/motion-ui/dist/motion-ui.css" /> -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+</head>
+<body>
+
+  <!-- Info Banner For Announcements or Links -->
+  <!-- <a href="http://zurb.com/wired" id="notice">
+    <div class="info">
+      <div id="clockdiv" class="countdown">
+          <span class="timer-day days"></span>
+          <span class="timer-colon">:</span>
+        <span class="timer-hour hours"></span>
+        <span class="timer-colon">:</span>
+        <span class="timer-hour minutes"></span>
+        <span class="timer-colon">:</span>
+        <span class="timer-seconds seconds"></span>
+      </div>
+    </div>
+  </a> -->
+
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <div class="off-canvas position-left" id="offCanvasLeft" data-off-canvas data-position="left">
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <ul class="mobile-ofc vertical menu">
+      
+          <li>
+            <a href="http://zurb.com/responsive">Showcase</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="http://zurb.com/responsive">Foundation Showcase</a></li>
+              <li><a href="http://foundation.zurb.com/showcase/brands.html">Brands</a></li>
+              <li><a href="http://foundation.zurb.com/showcase/case-studies.html">Case Studies</a></li>
+              <li><a href="http://foundation.zurb.com/showcase/blog.html">Blog</a></li>
+              <li><a href="http://foundation.zurb.com/showcase/buzz.html">Buzz</a></li>
+              <li><a href="http://foundation.zurb.com/showcase/about.html">About Foundation</a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="http://foundation.zurb.com/develop/getting-started.html">Develop</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li class="title">Frameworks</li>
+              <li><a href="http://foundation.zurb.com/sites.html">Foundation for Sites</a></li>
+              <li><a href="http://foundation.zurb.com/emails.html">Foundation for Email</a></li>
+              <li class="divider"></li>
+              <li class="title">Develop</li>
+              <li><a href="http://foundation.zurb.com/templates.html">HTML Templates</a></li>
+              <li><a href="http://foundation.zurb.com/sites/resources.html">Resources</a></li>
+              <li><a href="http://foundation.zurb.com/develop/building-blocks.html">Building Blocks</a></li>
+              <li><a href="http://foundation.zurb.com/develop/contribute.html">Contribute</a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="http://foundation.zurb.com/learn/tutorials.html">Tutorials</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="http://foundation.zurb.com/learn/tutorials.html">Tutorials</a></li>
+              <li><a href="http://foundation.zurb.com/learn/classes.html">Classes</a></li>
+              <li><a href="http://foundation.zurb.com/learn/custom-training.html">Custom Training</a></li>
+              <li><a href="http://foundation.zurb.com/learn/certification.html">Certification</a></li>
+              <li><a href="http://foundation.zurb.com/learn/responsive-reading.html">Responsive Reading</a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="http://foundation.zurb.com/get-involved/support.html">Get Involved</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="http://foundation.zurb.com/get-involved/support.html">Connect</a></li>
+              <li><a href="http://foundation.zurb.com/get-involved/premium-support.html">PLZ Halp</a></li>
+              <li><a href="http://foundation.zurb.com/forum/sort/unanswered">Foundation Forum</a></li>
+              <li><a href="http://foundation.zurb.com/learn/events.html">Events</a></li>
+              <li><a href="http://foundation.zurb.com/get-involved/faq.html">FAQs</a></li>
+              <li><a href="http://foundation.zurb.com/get-involved/contribute.html">Contribute</a></li>
+              <li><a href="http://foundation.zurb.com/get-involved/yetinauts.html">Yetinauts</a></li>
+            </ul>
+          </li>
+      
+          <li>
+            <a href="http://foundation.zurb.com/frameworks-docs.html">Docs</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="http://foundation.zurb.com/docs/" target="_blank">Sites Docs</a></li>
+              <li><a href="http://zurb.com/ink/docs.php" target="_blank">Email Docs</a></li>
+            </ul>
+          </li>
+      
+          <li><a href="http://foundation.zurb.com/develop/getting-started.html" class="button">Getting Started</a></li>
+      
+        </ul>
+      </div>
+      
+      <div class="off-canvas position-right" id="offCanvasRight" data-off-canvas data-position="right">
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <ul class="vertical menu">
+          <li><a href="#">Foundation</a></li>
+          <li><a href="#">Dot</a></li>
+          <li><a href="#">ZURB</a></li>
+          <li><a href="#">Com</a></li>
+          <li><a href="#">Slash</a></li>
+          <li><a href="#">Sites</a></li>
+        </ul>
+      </div>
+      
+      <div class="off-canvas position-top" id="offCanvasTop" data-off-canvas data-position="top">
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <ul class="mobile-ofc vertical menu">
+          <li><a href="#">Off-canvas</a></li>
+          <li><a href="#">Example</a></li>
+          <li><a href="#">Vertical</a></li>
+          <li><a href="#">Menu</a></li>
+          <li><a href="#">From</a></li>
+          <li><a href="#">The</a></li>
+          <li><a href="#">Top</a></li>
+        </ul>
+      </div>
+      
+    </div>
+
+    <div class="docs-off-canvas-content off-canvas-content" data-off-canvas-content>
+      <!-- Info Banner For Announcements or Links -->
+      <!-- <a href="http://zurb.com/article/1416/foundation-6-is-here" id="notice">
+        <div class="info">
+          <h5>Foundation 6 is here!</h5>
+        </div>
+      </a> -->
+
+      <div class="docs-sticky-top-bar">
+        <nav class="global-nav show-for-smedium">
+        
+          <div class="global-nav-title">
+            <a class="zurb-logo" href="http://foundation.zurb.com/index.html">ZURB <strong>Foundation</strong></a>
+            <a class="tbg-logo" href="http://berndtgroup.net"><img src="assets/img/logos/tbg-logo.svg" alt="The Berndt Group"></a>
+          </div>
+        
+          <ul class="dropdown menu right-side" data-dropdown-menu data-click-open="true">
+        
+            <li class="menu-item">
+              <a href="http://zurb.com/responsive">Showcase</a>
+              <ul class="menu">
+                <li><a href="http://zurb.com/responsive">Foundation Showcase</a></li>
+                <li><a href="http://foundation.zurb.com/showcase/brands.html">Brands</a></li>
+                <li><a href="http://foundation.zurb.com/showcase/case-studies.html">Case Studies</a></li>
+                <li><a href="http://foundation.zurb.com/showcase/blog.html">Blog</a></li>
+                <li><a href="http://foundation.zurb.com/showcase/buzz.html">Buzz</a></li>
+                <li><a href="http://foundation.zurb.com/showcase/about.html">About Foundation</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-item">
+              <a href="http://foundation.zurb.com/develop/getting-started.html">Develop</a>
+              <ul class="menu">
+                <li class="title">Frameworks</li>
+                <li><a href="http://foundation.zurb.com/sites.html">Foundation for Sites</a></li>
+                <li><a href="http://foundation.zurb.com/emails.html">Foundation for Email</a></li>
+                <li class="divider"></li>
+                <li class="title">Develop</li>
+                <li><a href="http://foundation.zurb.com/templates.html">HTML Templates</a></li>
+                <li><a href="http://foundation.zurb.com/sites/resources.html">Resources</a></li>
+                <li><a href="http://foundation.zurb.com/develop/building-blocks.html">Building Blocks</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-item">
+              <a href="http://foundation.zurb.com/learn/tutorials.html">Tutorials</a>
+              <ul class="menu vertical">
+                <li><a href="http://foundation.zurb.com/learn/tutorials.html">Tutorials</a></li>
+                <li><a href="http://zurb.com/university/lessons">Lessons</a></li>
+                <li><a href="http://zurb.com/university/courses">Courses</a></li>
+                <li><a href="http://zurb.com/university/training">Custom Training</a></li>
+                <li><a href="http://foundation.zurb.com/learn/certification.html">Certification</a></li>
+                <li><a href="http://foundation.zurb.com/learn/responsive-reading.html">Responsive Reading</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-item">
+              <a href="http://foundation.zurb.com/get-involved/support.html">Get Involved</a>
+              <ul class="menu vertical">
+                <li><a href="http://foundation.zurb.com/get-involved/support.html">Connect</a></li>
+                <li><a href="http://foundation.zurb.com/get-involved/premium-support.html">PLZ Halp</a></li>
+                <li><a href="http://foundation.zurb.com/forum/">Foundation Forum</a></li>
+                <li><a href="http://foundation.zurb.com/learn/events.html">Events</a></li>
+                <li><a href="http://foundation.zurb.com/get-involved/faq.html">FAQs</a></li>
+                <li><a href="http://foundation.zurb.com/get-involved/contribute.html">Contribute</a></li>
+                <li><a href="http://foundation.zurb.com/get-involved/yetinauts.html">Yetinauts</a></li>
+                <li><a href="http://foundation.zurb.com/get-involved/partners.html">Partners</a></li>
+                <li><a href="http://foundation.zurb.com/email-sponsorships.html">Sponsorships</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-item">
+              <a href="http://foundation.zurb.com/frameworks-docs.html">Docs</a>
+              <ul class="menu vertical">
+                <li><a target="_blank" href="http://foundation.zurb.com/sites/docs/">Sites Docs</a></li>
+                <li><a target="_blank" href="http://foundation.zurb.com/emails/docs">Emails Docs</a></li>
+              </ul>
+            </li>
+        
+            <li class="menu-button"><a href="http://foundation.zurb.com/develop/getting-started.html" class="button">Getting Started</a></li>
+        
+          </ul>
+        </nav>
+        
+        <div class="global-nav-mobile-wrapper hide-for-smedium-up">
+          <button type="button" data-toggle="offCanvasLeft">
+            <img class="hamburger-icon" alt="Menu icon" src="assets/img/icons/menu-grey.png">
+          </button>
+          <div class="global-nav-title">
+            <a class="zurb-logo" href="http://foundation.zurb.com/index.html">ZURB <strong>Foundation</strong></a>
+            <a class="tbg-logo" href="http://berndtgroup.net"><img src="assets/img/logos/tbg-logo.svg" alt="The Berndt Group"></a>
+          </div>
+        </div>
+        
+        <div class="collapse expanded row secondary-bar">
+          <div class="small-5 medium-3 large-2 columns">
+        
+            <a target="_blank" href="https://github.com/zurb/foundation-sites/releases/" class="version-dropdown-label"><span class="foundation-version-label">Foundation for Sites</span><span class="foundation-version-number">6.3.1 </span> <span class="changelog-link">changelog</span></a>
+          </div>
+        
+          <div class="small-7 columns show-for-small-only">
+            <span class="search-button" data-toggle="inline-search"></span>
+            <a href="#" class="float-right small hollow button mobile-nav-button" data-open="navModal">Component List</a>
+            <div class="reveal nav-modal" id="navModal" data-reveal>
+                <div class="vertical menu docs-nav" id="docs-menu">
+              
+                <!--
+                  <ul class="docs-nav-version-container">
+                    <li class="docs-nav-version">
+                      <a href="https://github.com/zurb/foundation-sites/releases/" target="_blank">Changelog</a>
+                    </li>
+                  </ul>
+                -->
+              
+                  <ul class="accordion docs-nav-category" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+                    <a class="docs-expand-all" data-expand-all="true"></a>
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Getting Started</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="index.html">Welcome</a></li>
+                          <li><a href="installation.html">Installation</a></li>
+                          <li><a href="starter-projects.html">Starter Projects</a></li>
+                          <li><a href="compatibility.html">Compatibility</a></li>
+                          <li><a href="accessibility.html">Accessibility</a></li>
+                          <li><a href="kitchen-sink.html">Kitchen Sink</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Setup</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="global.html">Global Styles</a></li>
+                          <li><a href="rtl.html">Right-to-Left Support</a></li>
+                          <li><a href="flexbox.html">Flexbox</a></li>
+                          <li><a href="sass.html">Sass</a></li>
+                          <li><a href="javascript.html">JavaScript</a></li>
+                          <li><a href="javascript-utilities.html">JavaScript Utilities</a></li>
+                          <li><a href="media-queries.html">Media Queries</a> <span class="label">JS</span></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">General</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="grid.html">Grid</a></li>
+                          <li><a href="flex-grid.html">Flex Grid</a></li>
+                          <li><a href="forms.html">Forms</a></li>
+                          <li><a href="visibility.html">Visibility Classes</a></li>
+                          <li><a href="float-classes.html">Float Classes</a></li>
+                          <li><a href="vertical-rhythm.html">Vertical Rhythm <span class="label tbg">TBG</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Typography</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="typography-base.html">Base Styles</a></li>
+                          <li><a href="typography-helpers.html">Helper Classes</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Controls</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="button.html">Button</a></li>
+                          <li><a href="button-group.html">Button Group</a></li>
+                          <li><a href="close-button.html">Close Button</a></li>
+                          <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+                          <li><a href="switch.html">Switch</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Navigation</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="menu.html">Menu</a></li>
+                          <li><a href="dropdown-menu.html">Dropdown Menu <span class="label">JS</span></a></li>
+                          <li><a href="drilldown-menu.html">Drilldown Menu <span class="label">JS</span></a></li>
+                          <li><a href="accordion-menu.html">Accordion Menu <span class="label">JS</span></a></li>
+                          <li><a href="top-bar.html">Top Bar</a></li>
+                          <li><a href="responsive-navigation.html">Responsive Navigation</a></li>
+                          <li><a href="magellan.html">Magellan <span class="label">JS</span></a></li>
+                          <li><a href="pagination.html">Pagination</a></li>
+                          <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Containers</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
+                          <li><a href="callout.html">Callout</a></li>
+                          <li><a href="card.html">Card</a></li>
+                          <li><a href="css-columns.html">CSS Columns <span class="label tbg">TBG</span></a></li>
+                          <li><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
+                          <li><a href="media-object.html">Media Object</a></li>
+                          <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
+                          <li><a href="reveal.html">Reveal <span class="label">JS</span> <small>Modal</small></a></li>
+                          <li><a href="table.html">Table</a></li>
+                          <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+                          <li><a href="long-cat.html">Long Cat <span class="label">JS</span> <span class="label tbg">TBG</span></a></li>
+                          <li><a href="responsive-accordion-tabs.html">Responsive Accordion Tabs<span class="label">JS</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Media</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="badge.html">Badge</a></li>
+                          <li><a href="responsive-embed.html">Responsive Embed</a></li>
+                          <li><a href="label.html">Label</a></li>
+                          <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
+                          <li class="current"><a href="flickity.html">Flickity <span class="label">JS</span> <span class="label tbg">TBG</span> <small>Carousel</small></a></li>
+                          <li><a href="progress-bar.html">Progress Bar</a></li>
+                          <li><a href="thumbnail.html">Thumbnail</a></li>
+                          <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Plugins</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="abide.html">Abide <small>Form Validation</small></a></li>
+                          <li><a href="equalizer.html">Equalizer <small>Column Alignment</small></a></li>
+                          <li><a href="interchange.html">Interchange <small>Responsive Content</small></a></li>
+                          <li><a href="toggler.html">Toggler <small>CSS Helper</small></a></li>
+                          <li><a href="sticky.html">Sticky <small>Header/Sidebar</small></a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Sass</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="sass-functions.html">Functions</a></li>
+                          <li><a href="sass-mixins.html">Mixins</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item " data-accordion-item>
+                      <a href="#" class="accordion-title">Libraries</a>
+                      <div class="accordion-content " data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="motion-ui.html">Motion UI</a></li>
+                          <li><a href="panini.html">Panini</a></li>
+                          <li><a href="style-sherpa.html">Style Sherpa</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                    <li class="accordion-item" data-accordion-item>
+                      <a href="#" class="accordion-title">Older Versions</a>
+                      <div class="accordion-content" data-tab-content>
+                        <ul class="docs-nav-subcategory">
+                          <li><a href="http://foundation.zurb.com/sites/docs/v/5.5.3/index.html">Foundation 5</a></li>
+                          <li><a href="http://foundation.zurb.com/sites/docs/v/4.3.2/index.html">Foundation 4</a></li>
+                          <li><a href="http://foundation.zurb.com/sites/docs/v/3.2.5/">Foundation 3</a></li>
+                          <li><a href="http://foundation.zurb.com/sites/docs/v/2.2.1/">Foundation 2</a></li>
+                        </ul>
+                      </div>
+                    </li>
+              
+                  </ul>
+              
+                </div>
+              
+              <button class="close-button" data-close aria-label="Close modal" type="button">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div id="inline-search" class="inline-search" data-toggler="expanded">
+              <input type="text" class="docs-search" data-docs-search placeholder="Find a page, component, variable, mixin, function...">
+            </div>
+          </div>
+          <div class="small-12 medium-9 large-10 columns show-for-medium docs-search-wrapper">
+            <input type="text" class="docs-search" data-docs-search placeholder="Find a page, component, variable, mixin, function...">
+          </div>
+          <div class="social-list show-for-medium">
+            <div class="github-button">
+              <a class="github-button" href="https://github.com/zurb/foundation-sites" data-size="large" data-count-aria-label="# stargazers on GitHub" aria-label="Star zurb/foundation-sites on GitHub">Star</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+
+      <div class="collapse expanded row">
+        <div id="body-container" class="small-12 medium-9 large-10 medium-push-3 large-push-2 columns">
+  <!-- do not indent -->
+
+<article class="docs-component" id="docs-flickity">
+
+<!--<a href="#docs-menu" class="small secondary button expanded hide-for-medium mobile-nav-button">Jump to Nav</a>-->
+
+
+<div class="row">
+
+<div class="large-9 columns docs-component-inner " id="docs">
+<div>
+<header>
+  <h1 class="docs-page-title">Flickity</h1>
+
+    <span data-tooltip title="Requires a JavaScript library." class="docs-js label">JavaScript</span>
+    <span data-tooltip title="Customization by The Berndt Group" class="docs-tbg label">TBG</span>
+    <p class="docs-description lead">Alternative carousel to Foundation's Orbit</p>
+
+  
+
+</header>
+
+<h2 id="basics" class="docs-heading" data-magellan-target="basics">Basics<a class="docs-heading-icon" href="#basics"></a></h2><p>This plugin requires the <a href="http://flickity.metafizzy.co">Flickity</a> plugin, created and maintained by <a href="http://metafizzy.co">MetaFizzy</a>.</p>
+<p>Flickity options can be set by setting the <code>data-flickity</code> as a valid <a href="http://flickity.metafizzy.co/#initialize-with-html">JSON object of values</a>, or setting each option as a data attribute with the relevant value per the convention found in other Foundation plugins.</p>
+<p>Please refer to the Flickity docs for the complete <a href="http://flickity.metafizzy.co/options.html">list of options</a>.</p>
+<p>Just like Orbit, Flickity affords a great deal of leeway as far as the contents of each slide is concerned. We use the <code>aria-label</code> attribute to label what the carousel is, for assistive technology.</p>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-prev-next-buttons</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-page-dots</span>=<span class="hljs-string">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/01.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Space, the final frontier.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/02.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/03.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Encapsulating<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/04.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Outta This World<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-prev-next-buttons="true" data-page-dots="true">
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/01.jpg" alt="Space">
+    <figcaption class="flickity-caption">Space, the final frontier.</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/02.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/03.jpg" alt="Space">
+    <figcaption class="flickity-caption">Encapsulating</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/04.jpg" alt="Space">
+    <figcaption class="flickity-caption">Outta This World</figcaption>
+  </div>
+</div></div><hr>
+<h3 id="horizontal-scrolling-with-mouse-wheel-support" class="docs-heading">Horizontal scrolling with mouse wheel support<a class="docs-heading-icon" href="#horizontal-scrolling-with-mouse-wheel-support"></a></h3><p>For desktop users, using the trackpad or mouse wheel to navigate carousels can be convenient. To enable support for this, set the value of the <code>data-horizontal-scrolling</code> attribute to &quot;true&quot;</p>
+<p>Requires the <strong>jquery-mousewheel</strong> plugin.</p>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-horizontal-scrolling</span>=<span class="hljs-string">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/04.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Space, the final frontier.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/03.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-horizontal-scrolling="true">
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/04.jpg" alt="Space">
+    <figcaption class="flickity-caption">Space, the final frontier.</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/03.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+</div></div><hr>
+<h3 id="custom-previous-next-selectors" class="docs-heading">Custom previous/next selectors<a class="docs-heading-icon" href="#custom-previous-next-selectors"></a></h3><p>To have an element (or a comma separated list of elements) trigger the carousel to proceed to the previous slide, set the <code>data-previous-element</code> attribute to your selector of choice (for example, <code>.previous-link</code> or <code>.previous-link, .some-other-link</code>). The same goes for the <code>data-next-element</code> attribute, which will trigger the carousel to proceed to the next slide.</p>
+<p><strong>Note:</strong> these elements do <em>not</em> have to be within the <code>data-flickity-carousel</code> wrapper.</p>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-previous-element</span>=<span class="hljs-string">".previous-link"</span> <span class="hljs-attr">data-next-element</span>=<span class="hljs-string">".next-link, #some-button"</span> <span class="hljs-attr">data-wrap-around</span>=<span class="hljs-string">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/02.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/04.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/01.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Clicking <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"previous-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>this<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> link will take you to the previous slide, while clicking <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"next-link"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>this<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span> link will take you to the next slide.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"some-button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"button"</span>&gt;</span>Some button<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-previous-element=".previous-link" data-next-element=".next-link, #some-button" data-wrap-around="true">
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/02.jpg" alt="Space">
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/04.jpg" alt="Space">
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/01.jpg" alt="Space">
+  </div>
+</div>
+
+<p>Clicking <a class="previous-link" href="#">this</a> link will take you to the previous slide, while clicking <a class="next-link" href="#">this</a> link will take you to the next slide.</p>
+
+<button id="some-button" class="button">Some button</button></div><hr>
+<h3 id="enable-autoplay-at-a-media-query-breakpoint" class="docs-heading">Enable autoplay at a media query breakpoint<a class="docs-heading-icon" href="#enable-autoplay-at-a-media-query-breakpoint"></a></h3><p>Often times carousels&#39; contents stack at mobile window sizes, causing the height to change from slide to slide. If the carousel&#39;s <code>autoPlay</code> option is enabled, this can have the undesirable consequence of pushing all the content below the carousel up and down the page at intervals.</p>
+<p>To prevent this, set the <code>data-auto-play-breakpoint</code> attribute to the same breakpoint name as when the carousel&#39;s contents unstack.</p>
+<p><strong>Note:</strong> there&#39;s no need to set the <code>data-auto-play</code> attribute to <code>true</code> in addition to using <code>data-auto-play-breakpoint</code></p>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-auto-play-breakpoint</span>=<span class="hljs-string">"large"</span> <span class="hljs-attr">data-pause-auto-play-on-hover</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">data-wrap-around</span>=<span class="hljs-string">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"large-6 column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/01.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"large-6 column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Cupidatat commodo officia qui nisi culpa ullamco pariatur velit pariatur reprehenderit laboris anim mollit magna voluptate tempor consequat. Proident officia incididunt nulla occaecat sit ipsum et ex reprehenderit voluptate non duis ad adipisicing non culpa reprehenderit. Anim Lorem dolor in veniam et irure aliqua ipsum reprehenderit irure qui.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"row"</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"large-6 column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/02.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"large-6 column"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Occaecat velit esse non ullamco nulla ad aute proident pariatur cillum magna. Sit esse ullamco aliqua dolor et est aliquip culpa ea eiusmod cillum cillum quis. Dolor ut tempor ut aliqua proident sit commodo in qui labore aliqua in minim. Ad elit nostrud proident aliqua amet ipsum officia consectetur qui tempor aliqua.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Mollit in occaecat consequat fugiat deserunt ut et in cillum exercitation deserunt ad. Lorem dolore excepteur aliquip mollit in minim exercitation. Mollit ut laborum labore officia deserunt laboris sit velit officia et laboris est ad consectetur cillum. Ullamco consequat deserunt Lorem id ex ad eu fugiat ad esse in. Dolor minim ad do nulla fugiat laborum adipisicing dolore sit enim eu exercitation excepteur.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/03.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-auto-play-breakpoint="large" data-pause-auto-play-on-hover="false" data-wrap-around="true">
+  <div class="flickity-slide">
+    <div class="row">
+      <div class="large-6 column">
+        <img class="flickity-image" src="assets/img/orbit/01.jpg" alt="Space">
+      </div>
+      <div class="large-6 column">
+        <p>Cupidatat commodo officia qui nisi culpa ullamco pariatur velit pariatur reprehenderit laboris anim mollit magna voluptate tempor consequat. Proident officia incididunt nulla occaecat sit ipsum et ex reprehenderit voluptate non duis ad adipisicing non culpa reprehenderit. Anim Lorem dolor in veniam et irure aliqua ipsum reprehenderit irure qui.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flickity-slide">
+    <div class="row">
+      <div class="large-6 column">
+        <img class="flickity-image" src="assets/img/orbit/02.jpg" alt="Space">
+      </div>
+      <div class="large-6 column">
+        <p>Occaecat velit esse non ullamco nulla ad aute proident pariatur cillum magna. Sit esse ullamco aliqua dolor et est aliquip culpa ea eiusmod cillum cillum quis. Dolor ut tempor ut aliqua proident sit commodo in qui labore aliqua in minim. Ad elit nostrud proident aliqua amet ipsum officia consectetur qui tempor aliqua.</p>
+
+        <p>Mollit in occaecat consequat fugiat deserunt ut et in cillum exercitation deserunt ad. Lorem dolore excepteur aliquip mollit in minim exercitation. Mollit ut laborum labore officia deserunt laboris sit velit officia et laboris est ad consectetur cillum. Ullamco consequat deserunt Lorem id ex ad eu fugiat ad esse in. Dolor minim ad do nulla fugiat laborum adipisicing dolore sit enim eu exercitation excepteur.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/03.jpg" alt="Space">
+  </div>
+</div></div><hr>
+<h3 id="disable-or-enable-flickity-at-a-media-query-breakpoint" class="docs-heading">Disable or enable Flickity at a media query breakpoint<a class="docs-heading-icon" href="#disable-or-enable-flickity-at-a-media-query-breakpoint"></a></h3><p>To <em>completely disable</em> Flickity when the window expands to a certain media query, use the <code>data-disable-breakpoint</code> attribute with the breakpoint name as the value.</p>
+<p>To <em>completely enable</em> Flickity when the window expands to a certain media query, use the <code>data-enable-breakpoint</code> attribute with the breakpoint name as the value.</p>
+<p>Be careful when using both options simultaneously! You probably don&#39;t have to.</p>
+<p>You can read more about how Foundation works with media queries <a href="/media-queries.html">here</a>.</p>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-prev-next-buttons</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-disable-breakpoint</span>=<span class="hljs-string">"medium"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/02.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Space, the final frontier.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/01.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-prev-next-buttons="true" data-disable-breakpoint="medium">
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/02.jpg" alt="Space">
+    <figcaption class="flickity-caption">Space, the final frontier.</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/01.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+</div></div><hr>
+<h3 id="disable-dragging" class="docs-heading">Disable dragging<a class="docs-heading-icon" href="#disable-dragging"></a></h3><p>Set the <code>data-no-dragging</code> attribute to <code>true</code> to disable dragging. The carousel will then only proceed with its controls or with the autoplay option enabled.</p>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-no-dragging</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-auto-play</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">data-pause-auto-play-on-hover</span>=<span class="hljs-string">"false"</span> <span class="hljs-attr">data-wrap-around</span>=<span class="hljs-string">"true"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/03.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Space, the final frontier.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/04.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/02.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-no-dragging="true" data-auto-play="true" data-pause-auto-play-on-hover="false" data-wrap-around="true">
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/03.jpg" alt="Space">
+    <figcaption class="flickity-caption">Space, the final frontier.</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/04.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/02.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+</div></div><hr>
+<div class="docs-code" data-docs-code><pre><code class="html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"region"</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">"Favorite Space Pictures"</span> <span class="hljs-attr">data-flickity-carousel</span> <span class="hljs-attr">data-resize</span>=<span class="hljs-string">"false"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/03.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Space, the final frontier.<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/04.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-slide"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-image"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"assets/img/orbit/02.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Space"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">figcaption</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"flickity-caption"</span>&gt;</span>Lets Rocket!<span class="hljs-tag">&lt;/<span class="hljs-name">figcaption</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></div>
+
+<div class="docs-code-live"><div class="flickity" role="region" aria-label="Favorite Space Pictures" data-flickity-carousel data-resize="false">
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/03.jpg" alt="Space">
+    <figcaption class="flickity-caption">Space, the final frontier.</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/04.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+  <div class="flickity-slide">
+    <img class="flickity-image" src="assets/img/orbit/02.jpg" alt="Space">
+    <figcaption class="flickity-caption">Lets Rocket!</figcaption>
+  </div>
+</div></div>
+
+<hr>
+<section>
+  <h2 id="sass-reference" class="docs-heading" data-magellan-target="sass-reference">Sass Reference<a class="docs-heading-icon" href="#sass-reference"></a></h2>
+
+  <section>
+    <h3 id="sass-variables" class="docs-heading">Variables<a class="docs-heading-icon" href="#sass-variables"></a></h3>
+
+    <p>The default styles of this component can be customized using these Sass variables in your project's <a href="sass.html#the-settings-file">settings file</a>.</p>
+
+    <table class="docs-variable-table">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Default Value</th><th>Description</th></tr>
+      </thead>
+      <tr>
+        <td class="name"><code>$flickity-viewport-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.flickity-viewport'</code></td>
+        <td><p>Default Flickity viewport class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-slide-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.flickity-slide'</code></td>
+        <td><p>Default Flickity slide class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-rtl-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.flickity-rtl'</code></td>
+        <td><p>Default Flickity right-to-left class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-arrow-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.arrow'</code></td>
+        <td><p>Default Flickity arrow class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-dot-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.dot'</code></td>
+        <td><p>Default Flickity dot class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-prev-button-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.previous'</code></td>
+        <td><p>Default Flickity previous button class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-next-button-class</code></td>
+        <td>String</td>
+        <td class="string"><code>'.next'</code></td>
+        <td><p>Default Flickity next button class</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-slide-width</code></td>
+        <td>Color</td>
+        <td class="color"><code>100%</code></td>
+        <td><p>Default focus outline color for Flickity&#39;s bullets.</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-bullet-background</code></td>
+        <td>Color</td>
+        <td class="color"><code>hsla(0, 0%, 100%, 0.75)</code></td>
+        <td><p>Default color for Flickity&#39;s bullets.</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-bullet-background-active</code></td>
+        <td>Color</td>
+        <td class="color"><code>$light-gray</code></td>
+        <td><p>Default active color for Flickity&#39;s bullets.</p>
+</td>
+      </tr>
+      <tr>
+        <td class="name"><code>$flickity-bullet-focus</code></td>
+        <td>Color</td>
+        <td class="color"><code>#09f</code></td>
+        <td><p>Default focus outline color for Flickity&#39;s bullets.</p>
+</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <section>
+    <h3 id="sass-mixins" class="docs-heading">Mixins<a class="docs-heading-icon" href="#sass-mixins"></a></h3>
+
+    <p>We use these mixins to build the final CSS output of this component. You can use the mixins yourself to build your own class structure out of our components.</p>
+
+    
+    <section >
+      <h4 id="flickity-enabled" class="docs-heading">flickity-enabled<a class="docs-heading-icon" href="#flickity-enabled"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-enabled;</code></pre>
+      </div>
+
+      <p>Adds styles for the outer Flickity wrapper. These styles are used on the <code>.flickity-enabled</code> class.</p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-viewport" class="docs-heading">flickity-viewport<a class="docs-heading-icon" href="#flickity-viewport"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-viewport;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity viewport wrapper. These styles are used on the <code>.flickity-viewport</code> class.</p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-slider" class="docs-heading">flickity-slider<a class="docs-heading-icon" href="#flickity-slider"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-slider;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity slider wrapper. These styles are used on the <code>.flickity-slider</code> class.</p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-slide" class="docs-heading">flickity-slide<a class="docs-heading-icon" href="#flickity-slide"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-slide;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity slide. These styles are used on the <code>.flickity-slide</code> class.</p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-is-draggable" class="docs-heading">flickity-is-draggable<a class="docs-heading-icon" href="#flickity-is-draggable"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-is-draggable;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity&#39;s &quot;draggable&quot; mode. These styles are used on the <code>.is-draggable</code> modifier class, chained to the <code>.flickity-enabled</code> class.</p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-prev-next-button" class="docs-heading">flickity-prev-next-button<a class="docs-heading-icon" href="#flickity-prev-next-button"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-prev-next-button;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity&#39;s previous and next buttons. These styles are used on the <code>.flickity-prev-button</code> and <code>.flickity-next-button</code> classes</p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-prev-button" class="docs-heading">flickity-prev-button<a class="docs-heading-icon" href="#flickity-prev-button"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-prev-button;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity&#39;s previous button. These styles are used on the <code>.flickity-prev-button</code></p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-next-button" class="docs-heading">flickity-next-button<a class="docs-heading-icon" href="#flickity-next-button"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-next-button;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity&#39;s next button. These styles are used on the <code>.flickity-next-button</code></p>
+
+
+
+      
+
+    </section>
+
+    <hr>
+
+
+    
+    <section >
+      <h4 id="flickity-page-dots" class="docs-heading">flickity-page-dots<a class="docs-heading-icon" href="#flickity-page-dots"></a></h4>
+
+
+
+      <div class="docs-code">
+        <pre><code>@<span class="hljs-keyword">include</span> flickity-page-dots;</code></pre>
+      </div>
+
+      <p>Adds styles for the Flickity&#39;s page buttons. These styles are used on the <code>.flickity-page-buttons</code></p>
+
+
+
+      
+
+    </section>
+
+    
+
+
+    
+  </section>
+
+
+</section>
+
+<hr>
+<section>
+  <h2 id="javascript-reference" class="docs-heading" data-magellan-target="javascript-reference">JavaScript Reference<a class="docs-heading-icon" href="#javascript-reference"></a></h2>
+
+  
+  <section>
+    <h3 id="js-module" class="docs-heading">Initializing<a class="docs-heading-icon" href="#js-module"></a></h3>
+
+    <p>The file <code>foundation.flickity.js</code> must be included in your JavaScript to use this plugin, along with <code>foundation.core.js</code>. <strong>This plugin also requires these utility libraries:</strong></p>
+
+    
+    <ul>
+      <li><code>jquery.mousewheel.js</code></li>
+    </ul>
+    
+    <ul>
+      <li><code>flickity.pkgd.js</code></li>
+    </ul>
+    
+
+  </section>
+  
+
+  <section>
+    <h3 id="js-class" class="docs-heading">Foundation.FlickityCarousel<a class="docs-heading-icon" href="#js-class"></a></h3>
+
+    <p>Creates a new instance of a Flickity Carousel.</p>
+
+
+    <div class="docs-code"><pre><code><span class="hljs-keyword">var</span> elem = <span class="hljs-keyword">new</span> Foundation.FlickityCarousel(element, options);</code></pre></div>
+
+
+    <table class="docs-variable-table">
+      <thead>
+        <tr><th>Name</th><th>Type</th><th>Description</th></tr>
+      </thead>
+      <tr>
+        <td><code>element</code></td>
+        <td>jQuery</td>
+        <td>jQuery object to make into an Flickity Carousel.</td>
+      </tr>
+      <tr>
+        <td><code>options</code></td>
+        <td>Object</td>
+        <td>Overrides to the default plugin settings.</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+  <section>
+    <h3 id="js-options" class="docs-heading">Plugin Options<a class="docs-heading-icon" href="#js-options"></a></h3>
+
+    <p>Use these options to customize an instance of Flickity. Plugin options can be set as individual data attributes, one combined <code>data-options</code> attribute, or as an object passed to the plugin's constructor. <a href="javascript.html#initializing">Learn more about how JavaScript plugins are initialized.</a></p>
+
+    <table class="docs-variable-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tr>
+        <td><code>data-horizontal-scrolling</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Enable horizontal scrolling with mousewheel support</td>
+      </tr>
+      <tr>
+        <td><code>data-previous-element</code></td>
+        <td><code>string</code></td>
+        <td><code>''</code></td>
+        <td>Comma separated list of selectors that will trigger the previous
+slide in the carousel</td>
+      </tr>
+      <tr>
+        <td><code>data-next-element</code></td>
+        <td><code>string</code></td>
+        <td><code>''</code></td>
+        <td>Comma separated list of selectors that will trigger the next slide
+in the carousel</td>
+      </tr>
+      <tr>
+        <td><code>data-auto-play-breakpoint</code></td>
+        <td><code>string</code></td>
+        <td><code>''</code></td>
+        <td>Enable autoPlay option at a given breakpoint</td>
+      </tr>
+      <tr>
+        <td><code>data-disable-breakpoint</code></td>
+        <td><code>string</code></td>
+        <td><code>''</code></td>
+        <td>Disable Flickity at a given breakpoint</td>
+      </tr>
+      <tr>
+        <td><code>data-enable-breakpoint</code></td>
+        <td><code>string</code></td>
+        <td><code>''</code></td>
+        <td>Enable Flickity at a given breakpoint</td>
+      </tr>
+      <tr>
+        <td><code>data-no-dragging</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Disable dragging</td>
+      </tr>
+      <tr>
+        <td><code>data-prev-next-buttons</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Generates previous and next button HTML</td>
+      </tr>
+      <tr>
+        <td><code>data-page-dots</code></td>
+        <td><code>boolean</code></td>
+        <td><code>false</code></td>
+        <td>Generates page dots HTML</td>
+      </tr>
+      <tr>
+        <td><code>data-images-loaded</code></td>
+        <td><code>boolean</code></td>
+        <td><code>true</code></td>
+        <td>Re-positions carousel once its images have loaded</td>
+      </tr>
+    </table>
+  </section>
+
+  <hr>
+
+
+  <hr>
+
+  <section>
+    <h3 id="js-functions" class="docs-heading">Methods<a class="docs-heading-icon" href="#js-functions"></a></h3>
+
+    <section>
+      <h4 id="destroy" class="docs-heading">destroy<a class="docs-heading-icon" href="#destroy"></a></h4>
+
+      <div class="docs-code">
+        <pre><code>$(<span class="hljs-string">'#element'</span>).foundation(<span class="hljs-string">'destroy'</span>);</code></pre>
+      </div>
+
+      <p>Destroys the carousel and hides the element.</p>
+
+
+
+
+      
+    </section>
+  </section>
+</section>
+
+<!-- <hr> -->
+<!-- <section class="docs-building-blocks">
+  <h2 id="building-blocks" class="docs-heading" data-magellan-target="building-blocks">Building Blocks<a class="docs-heading-icon" href="#building-blocks"></a></h2>
+
+  <p><a href="http://zurb.com/building-blocks">Building Blocks</a> is a ZURB-curated resource with useful code snippets that use Foundation components. Here are a few for this component:</p>
+
+  <div class="warning callout">
+    <p>These are placeholder items. If you have ideas for building blocks for this component, <a href="https://github.com/zurb/foundation-sites-6/issues/118">we're taking ideas on GitHub</a>.</p>
+  </div>
+
+  <div data-building-blocks></div>
+</section> -->
+</div>
+</div>
+
+<div class="large-3 columns show-for-medium">
+<nav class="docs-toc-wrap" id="docsToc" data-sticky-container>
+  <div class="docs-toc hide" id="docsTOC" data-sticky data-margin-top="6" data-anchor="docs">
+    <ul class="vertical menu" data-docs-toc>
+      <li class="docs-nav-title">Flickity</li>
+    </ul>
+
+    <hr class="docs-toc-divider small">
+
+    <ul class="docs-contribute-menu">
+      <li><a href="https://github.com/zurb/tbg-foundation-sites/edit/tbg/docs/pages/flickity.md" target="_blank"><i class="fi-pencil"></i>Edit this Page</a></li>
+      <li><a href="https://github.com/zurb/tbg-foundation-sites/issues/new?title=%5BFlickity%5D%20ISSUE%20NAME%20HERE" target="_blank"><i class="fi-social-github"></i>Report a Bug</a></li>
+        <li><a href="http://foundation.zurb.com/forum?search=Flickity" target="_blank"><i class="fi-comment"></i>Get Help</a></li>
+    </ul>
+  </div>
+
+</nav>
+
+
+</div>
+
+</div>
+
+</article>
+
+        </div>
+        <div class="medium-3 large-2 medium-pull-9 large-pull-10 hide-for-small-only columns" data-sticky-container>
+          <div class="docs-nav-container" data-sticky data-anchor="body-container" data-margin-top="6">
+              <div class="vertical menu docs-nav" id="docs-menu">
+            
+              <!--
+                <ul class="docs-nav-version-container">
+                  <li class="docs-nav-version">
+                    <a href="https://github.com/zurb/foundation-sites/releases/" target="_blank">Changelog</a>
+                  </li>
+                </ul>
+              -->
+            
+                <ul class="accordion docs-nav-category" data-accordion data-allow-all-closed="true" data-multi-expand="true">
+                  <a class="docs-expand-all" data-expand-all="true"></a>
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Getting Started</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="index.html">Welcome</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                        <li><a href="starter-projects.html">Starter Projects</a></li>
+                        <li><a href="compatibility.html">Compatibility</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                        <li><a href="kitchen-sink.html">Kitchen Sink</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Setup</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="global.html">Global Styles</a></li>
+                        <li><a href="rtl.html">Right-to-Left Support</a></li>
+                        <li><a href="flexbox.html">Flexbox</a></li>
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="javascript.html">JavaScript</a></li>
+                        <li><a href="javascript-utilities.html">JavaScript Utilities</a></li>
+                        <li><a href="media-queries.html">Media Queries</a> <span class="label">JS</span></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">General</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="grid.html">Grid</a></li>
+                        <li><a href="flex-grid.html">Flex Grid</a></li>
+                        <li><a href="forms.html">Forms</a></li>
+                        <li><a href="visibility.html">Visibility Classes</a></li>
+                        <li><a href="float-classes.html">Float Classes</a></li>
+                        <li><a href="vertical-rhythm.html">Vertical Rhythm <span class="label tbg">TBG</span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Typography</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="typography-base.html">Base Styles</a></li>
+                        <li><a href="typography-helpers.html">Helper Classes</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Controls</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="button.html">Button</a></li>
+                        <li><a href="button-group.html">Button Group</a></li>
+                        <li><a href="close-button.html">Close Button</a></li>
+                        <li><a href="slider.html">Slider <span class="label">JS</span></a></li>
+                        <li><a href="switch.html">Switch</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Navigation</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="dropdown-menu.html">Dropdown Menu <span class="label">JS</span></a></li>
+                        <li><a href="drilldown-menu.html">Drilldown Menu <span class="label">JS</span></a></li>
+                        <li><a href="accordion-menu.html">Accordion Menu <span class="label">JS</span></a></li>
+                        <li><a href="top-bar.html">Top Bar</a></li>
+                        <li><a href="responsive-navigation.html">Responsive Navigation</a></li>
+                        <li><a href="magellan.html">Magellan <span class="label">JS</span></a></li>
+                        <li><a href="pagination.html">Pagination</a></li>
+                        <li><a href="breadcrumbs.html">Breadcrumbs</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Containers</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="accordion.html">Accordion <span class="label">JS</span></a></li>
+                        <li><a href="callout.html">Callout</a></li>
+                        <li><a href="card.html">Card</a></li>
+                        <li><a href="css-columns.html">CSS Columns <span class="label tbg">TBG</span></a></li>
+                        <li><a href="dropdown.html">Dropdown <span class="label">JS</span></a></li>
+                        <li><a href="media-object.html">Media Object</a></li>
+                        <li><a href="off-canvas.html">Off-canvas <span class="label">JS</span></a></li>
+                        <li><a href="reveal.html">Reveal <span class="label">JS</span> <small>Modal</small></a></li>
+                        <li><a href="table.html">Table</a></li>
+                        <li><a href="tabs.html">Tabs <span class="label">JS</span></a></li>
+                        <li><a href="long-cat.html">Long Cat <span class="label">JS</span> <span class="label tbg">TBG</span></a></li>
+                        <li><a href="responsive-accordion-tabs.html">Responsive Accordion Tabs<span class="label">JS</span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Media</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="badge.html">Badge</a></li>
+                        <li><a href="responsive-embed.html">Responsive Embed</a></li>
+                        <li><a href="label.html">Label</a></li>
+                        <li><a href="orbit.html">Orbit <span class="label">JS</span> <small>Carousel</small></a></li>
+                        <li class="current"><a href="flickity.html">Flickity <span class="label">JS</span> <span class="label tbg">TBG</span> <small>Carousel</small></a></li>
+                        <li><a href="progress-bar.html">Progress Bar</a></li>
+                        <li><a href="thumbnail.html">Thumbnail</a></li>
+                        <li><a href="tooltip.html">Tooltip <span class="label">JS</span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Plugins</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="abide.html">Abide <small>Form Validation</small></a></li>
+                        <li><a href="equalizer.html">Equalizer <small>Column Alignment</small></a></li>
+                        <li><a href="interchange.html">Interchange <small>Responsive Content</small></a></li>
+                        <li><a href="toggler.html">Toggler <small>CSS Helper</small></a></li>
+                        <li><a href="sticky.html">Sticky <small>Header/Sidebar</small></a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Sass</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="sass-functions.html">Functions</a></li>
+                        <li><a href="sass-mixins.html">Mixins</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item " data-accordion-item>
+                    <a href="#" class="accordion-title">Libraries</a>
+                    <div class="accordion-content " data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="motion-ui.html">Motion UI</a></li>
+                        <li><a href="panini.html">Panini</a></li>
+                        <li><a href="style-sherpa.html">Style Sherpa</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Older Versions</a>
+                    <div class="accordion-content" data-tab-content>
+                      <ul class="docs-nav-subcategory">
+                        <li><a href="http://foundation.zurb.com/sites/docs/v/5.5.3/index.html">Foundation 5</a></li>
+                        <li><a href="http://foundation.zurb.com/sites/docs/v/4.3.2/index.html">Foundation 4</a></li>
+                        <li><a href="http://foundation.zurb.com/sites/docs/v/3.2.5/">Foundation 3</a></li>
+                        <li><a href="http://foundation.zurb.com/sites/docs/v/2.2.1/">Foundation 2</a></li>
+                      </ul>
+                    </div>
+                  </li>
+            
+                </ul>
+            
+              </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+  var _gaq = _gaq || [];
+  _gaq.push(
+    ['_setAccount', 'UA-2195009-2'],
+    ['_trackPageview'],
+    ['b._setAccount', 'UA-2195009-27'],
+    ['b._trackPageview']
+  );
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+
+  <script src="assets/js/vendor.js?t=1?hash=5226bd1a7322715331a35ffbc4cb0795"></script>
+  <script src="assets/js/foundation.js?hash=d81cc87e13b39033e82e1309c082fa9c"></script>
+  <script src="assets/js/docs.js?t=1?hash=020e4997fa2b45c51bb260982f742e2c"></script>
+  <script type="text/javascript" src="https://intercom.zurb.com/scripts/zcom.js"></script>
+  <script type="text/javascript">
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+    document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', '585552368271130');
+    fbq('track', "PageView");
+  </script>
+  <!-- Twitter universal website tag code -->
+  <script>
+    !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+    },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+    a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+    // Insert Twitter Pixel ID and Standard Event data below
+    twq('init','nvkjx');
+    twq('track','PageView');
+  </script>
+  <!-- End Twitter universal website tag code -->
+
+
+</body>
+</html>
