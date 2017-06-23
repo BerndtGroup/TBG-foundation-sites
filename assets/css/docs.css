@@ -5997,6 +5997,9 @@ a > code {
     margin-left: 5px;
     padding: 0.22222rem 0.44444rem 0.22222rem;
     font-size: 0.61111rem; }
+    .docs-nav .label.tbg {
+      background: #ff8f00;
+      color: #fff; }
 
 .docs-nav-container.is-stuck {
   width: 100%; }
@@ -7089,7 +7092,7 @@ a#notice {
 .docs-tbg.label {
   background: #ff8f00;
   margin-left: 10px;
-  vertical-align: middle; }
+  vertical-align: sub; }
   .docs-tbg.label a {
     color: white; }
 
